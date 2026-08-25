@@ -69,6 +69,7 @@ export default function Home() {
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           <a href="#about" onClick={closeMenu}>عن الشركة</a>
           <a href="#projects" onClick={closeMenu}>مشاريعنا</a>
+          <a href="#team" onClick={closeMenu}>فريقنا</a>
           <a href="#vision" onClick={closeMenu}>رؤيتنا</a>
           <a href="#contact" className="nav-contact" onClick={closeMenu}>تواصل معنا <ArrowUpLeft size={15} /></a>
         </nav>
@@ -83,10 +84,20 @@ export default function Home() {
             <p>شركة ناشئة متخصصة في حلول الأتمتة وهندسة الحواسيب، نطوّر أدوات واقعية للقطاعات التي تحتاج تقنية تصنع فرقًا يمكن قياسه.</p>
             <a href="#projects" className="line-button">استكشف مشاريعنا <ArrowLeft size={17} /></a>
           </div>
-          <figure className="cover-image image-frame">
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/zExURtowCysrXNwS.jpg" alt="تصميم حاضنة بيض مؤتمتة من مشاريع سادة التحكم" />
-            <figcaption>SMART INCUBATION SYSTEM / 01</figcaption>
-          </figure>
+          <div className="cover-visuals">
+            <figure className="cover-image hero-product">
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/zExURtowCysrXNwS.jpg" alt="تصميم حاضنة بيض مؤتمتة من مشاريع سادة التحكم" />
+              <figcaption>SMART INCUBATION SYSTEM / 01</figcaption>
+            </figure>
+            <figure className="cover-image hero-sensor">
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/vtnSNLStfCLsEEGw.jpg" alt="حساس رؤية حاسوبية ضمن نظام فرز البيض" />
+              <figcaption>COMPUTER VISION</figcaption>
+            </figure>
+            <figure className="cover-image hero-session">
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/qBWbdZxxrUabPyGq.jpg" alt="اجتماع لفريق سادة التحكم" />
+              <figcaption>LOCAL EXPERTISE</figcaption>
+            </figure>
+          </div>
           <div className="cover-grid" aria-hidden="true"><span /><span /><span /></div>
           <div className="cover-index">01 <i /> 05</div>
         </section>
@@ -137,6 +148,15 @@ export default function Home() {
           <div className="vision-title"><div className="section-kicker"><span>04</span><i /> رؤيتنا</div><h2>تقنية محلية<br />لمستقبل <em>منتِج.</em></h2></div>
           <div className="vision-copy"><p>استخدام التقنيات الحديثة في الصناعات السورية والاستفادة من الخبرات المحلية للنهوض بمستوى الصناعة السورية.</p><p>نطمح إلى انتقال سورية من بلد مستهلك للتقنيات الحديثة إلى بلد منتج لأحدث التقنيات والأدوات التي تعتمد بشكل أساسي على الذكاء الاصطناعي، مع تدريب الشباب الناشئ عقليًا ومهاريًا على مواكبة التطورات.</p></div>
           <div className="vision-lines" aria-hidden="true"><span /><span /><span /></div>
+        </section>
+
+        <section className="team-section slide-frame" id="team">
+          <div className="team-head"><div className="section-kicker"><span>05</span><i /> فريق العمل</div><h2>خبرات محلية<br />تعمل <em>كفريق واحد.</em></h2></div>
+          <div className="team-intro">نؤمن بأن أفضل الحلول تبدأ من فريق يفهم التقنية ويفهم الواقع الذي سيعمل فيه النظام.</div>
+          <div className="team-grid">
+            <article className="team-member"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/SPhoBveBPajwKozG.jpg" alt="نعمان داود" /><div><span>01 / المؤسسون</span><h3>نعمان داود</h3><p>المدير التنفيذي</p></div></article>
+            <article className="team-member"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/PpqEzUuVVnOmyYkm.jpg" alt="همام الشيخ" /><div><span>02 / المؤسسون</span><h3>همام الشيخ</h3><p>مسؤول العلاقات العامة</p></div></article>
+          </div>
         </section>
 
         <section className="contact-section slide-frame" id="contact">
