@@ -10,7 +10,7 @@ const projects = [
     title: "حاضنة وفرز البيض بالذكاء الاصطناعي",
     description: "نظام يصنّف البيض إلى ملقّح وغير ملقّح في اليوم الثالث من الاحتضان، بالاعتماد على الذكاء الاصطناعي والرؤية الحاسوبية.",
     note: "براءة اختراع محلية · زيادة إنتاجية صيصان الفقس حتى 30%",
-    image: "/manus-storage/sada-egg-sorter_b552596d.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/HbpOYOxJysjpnCXR.jpg",
     alt: "آلية حضن وفرز البيض المطورة من سادة التحكم",
     tone: "wood",
   },
@@ -19,7 +19,7 @@ const projects = [
     title: "AutoMate X",
     description: "نظام أتمتة ومراقبة لخطوط الإنتاج في معامل الألبسة، يتيح متابعة الإنتاج من المكتب وعن بُعد.",
     note: "أتمتة · مراقبة · إدارة إنتاج",
-    image: "/manus-storage/sada-automatex_9ad4dae3.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/MDfzByinmkrhsRps.jpg",
     alt: "وحدة رؤية ومراقبة مستخدمة ضمن نظام AutoMate X",
     tone: "soft",
   },
@@ -28,7 +28,7 @@ const projects = [
     title: "تطبيق مدرسة عبد القادر بدران الشرعية",
     description: "نظام إدارة شامل يرقمن تسجيل الطلاب، وينظم عمل الإدارة، ويمنح الأهل وسيلة واضحة لمتابعة الطلاب.",
     note: "تطبيق جوال · إدارة مدرسية · متابعة أولياء الأمور",
-    image: "/manus-storage/sada-school-app_750b0d7e.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nnemqAteitXKqRUg.jpg",
     alt: "واجهات تطبيق مدرسة عبد القادر بدران الشرعية",
     tone: "green",
   },
@@ -46,7 +46,7 @@ const projects = [
     title: "أدوات زراعية لصواني الشتل",
     description: "أدوات عملية لفنيي الزراعة وأصحاب المشاتل لتسهيل زراعة صواني الشتل وإدخال أساليب حديثة للمشاتل البلاستيكية.",
     note: "زراعة ذكية · مشاتل · كلفة تشغيل منخفضة",
-    image: "/manus-storage/sada-seedling-tray_a80fc64c.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/WEATcOkfgBRxRptC.jpg",
     alt: "صينية شتل زراعية مطورة ضمن مشاريع الشركة",
     tone: "sand",
   },
@@ -84,7 +84,7 @@ export default function Home() {
             <a href="#projects" className="line-button">استكشف مشاريعنا <ArrowLeft size={17} /></a>
           </div>
           <figure className="cover-image image-frame">
-            <img src="/manus-storage/sada-hero-incubator_506236b7.jpg" alt="تصميم حاضنة بيض مؤتمتة من مشاريع سادة التحكم" />
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/zExURtowCysrXNwS.jpg" alt="تصميم حاضنة بيض مؤتمتة من مشاريع سادة التحكم" />
             <figcaption>SMART INCUBATION SYSTEM / 01</figcaption>
           </figure>
           <div className="cover-grid" aria-hidden="true"><span /><span /><span /></div>
