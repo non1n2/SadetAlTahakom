@@ -1,56 +1,55 @@
 /**
- * Design philosophy: مختبر الحقول الذكية — تخطيط تحريري عربي غير متماثل، كحلي موثوق، أخضر طحلبي عملي، ولمسات ذهبية تشغيلية.
+ * Design reference: العرض التقديمي المرفق — خلفية بيضاء، إطارات سوداء، زوايا هندسية، وصور الشركة فقط.
  */
-import {
-  ArrowLeft,
-  ArrowUpLeft,
-  ChevronDown,
-  Cpu,
-  Eye,
-  Factory,
-  Leaf,
-  Menu,
-  Network,
-  ScanLine,
-  Settings2,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ArrowLeft, ArrowUpLeft, ChevronLeft, Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 
-const asset = (path: string) => path;
-
-const services = [
+const projects = [
   {
-    index: "01",
-    icon: Cpu,
-    title: "برمجيات ومنصات مخصصة",
-    text: "نصمم ونطوّر مواقع الويب وتطبيقات الجوال والأنظمة التي تختصر التعقيد وتمنح فريقك رؤية أدق.",
+    number: "01",
+    title: "حاضنة وفرز البيض بالذكاء الاصطناعي",
+    description: "نظام يصنّف البيض إلى ملقّح وغير ملقّح في اليوم الثالث من الاحتضان، بالاعتماد على الذكاء الاصطناعي والرؤية الحاسوبية.",
+    note: "براءة اختراع محلية · زيادة إنتاجية صيصان الفقس حتى 30%",
+    image: "/manus-storage/sada-egg-sorter_b552596d.jpg",
+    alt: "آلية حضن وفرز البيض المطورة من سادة التحكم",
+    tone: "wood",
   },
   {
-    index: "02",
-    icon: Factory,
-    title: "حلول أتمتة موثوقة",
-    text: "نحوّل العمليات المتكررة إلى أنظمة أكثر اتساقًا، مع مراقبة وتحكم قابلين للقياس.",
+    number: "02",
+    title: "AutoMate X",
+    description: "نظام أتمتة ومراقبة لخطوط الإنتاج في معامل الألبسة، يتيح متابعة الإنتاج من المكتب وعن بُعد.",
+    note: "أتمتة · مراقبة · إدارة إنتاج",
+    image: "/manus-storage/sada-automatex_9ad4dae3.jpg",
+    alt: "وحدة رؤية ومراقبة مستخدمة ضمن نظام AutoMate X",
+    tone: "soft",
   },
   {
-    index: "03",
-    icon: Leaf,
-    title: "حلول زراعية ذكية",
-    text: "نربط الحساسات والبيانات بالقرار، لتصبح الموارد الزراعية أكثر كفاءة واستدامة.",
+    number: "03",
+    title: "تطبيق مدرسة عبد القادر بدران الشرعية",
+    description: "نظام إدارة شامل يرقمن تسجيل الطلاب، وينظم عمل الإدارة، ويمنح الأهل وسيلة واضحة لمتابعة الطلاب.",
+    note: "تطبيق جوال · إدارة مدرسية · متابعة أولياء الأمور",
+    image: "/manus-storage/sada-school-app_750b0d7e.jpg",
+    alt: "واجهات تطبيق مدرسة عبد القادر بدران الشرعية",
+    tone: "green",
   },
   {
-    index: "04",
-    icon: Eye,
-    title: "رؤية حاسوبية وذكاء اصطناعي",
-    text: "نبني أنظمة ترى الأنماط وتساعدك على اتخاذ القرار في الوقت المناسب.",
+    number: "04",
+    title: "مكنة CNC لحفر الخشب",
+    description: "تصميم وتصنيع مكنة لحفر الخشب والنقش على الأبواب الخشبية بخبرات محلية، مع خدمات صيانة سريعة.",
+    note: "تصميم محلي · تصنيع · صيانة",
+    image: null,
+    alt: "",
+    tone: "technical",
   },
-];
-
-const steps = [
-  ["01", "نستمع", "نبدأ من الواقع الفعلي للمشكلة، لا من حل جاهز."],
-  ["02", "نبني", "نحوّل الفكرة إلى نموذج أولي يمكن اختباره مبكرًا."],
-  ["03", "نقيس", "نراقب النتيجة ونحسّن النظام حتى يصبح أثره واضحًا."],
+  {
+    number: "05",
+    title: "أدوات زراعية لصواني الشتل",
+    description: "أدوات عملية لفنيي الزراعة وأصحاب المشاتل لتسهيل زراعة صواني الشتل وإدخال أساليب حديثة للمشاتل البلاستيكية.",
+    note: "زراعة ذكية · مشاتل · كلفة تشغيل منخفضة",
+    image: "/manus-storage/sada-seedling-tray_a80fc64c.jpg",
+    alt: "صينية شتل زراعية مطورة ضمن مشاريع الشركة",
+    tone: "sand",
+  },
 ];
 
 export default function Home() {
@@ -58,68 +57,95 @@ export default function Home() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="site-shell" dir="rtl">
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="سادة التحكم - الصفحة الرئيسية" onClick={closeMenu}>
-          <span className="brand-mark"><img src={asset("/manus-storage/asyad-control-mark_b1e340c2.png")} alt="" /></span>
-          <span><strong>سادة</strong><small>التحكم</small></span>
+    <div className="ppt-site" dir="rtl">
+      <header className="topbar">
+        <a href="#home" className="wordmark" aria-label="سادة التحكم - الصفحة الرئيسية" onClick={closeMenu}>
+          <span>سادة التحكم</span>
+          <small>لحلول الأتمتة والذكاء الاصطناعي</small>
         </a>
-        <button className="menu-toggle" type="button" aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"} onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        <button className="menu-button" type="button" onClick={() => setMenuOpen((value) => !value)} aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"}>
+          {menuOpen ? <X size={21} /> : <Menu size={21} />}
         </button>
-        <nav className={menuOpen ? "main-nav is-open" : "main-nav"}>
+        <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           <a href="#about" onClick={closeMenu}>عن الشركة</a>
-          <a href="#services" onClick={closeMenu}>مجالاتنا</a>
-          <a href="#project" onClick={closeMenu}>مشروع مميز</a>
-          <a href="#contact" className="nav-cta" onClick={closeMenu}>لنتحدث <ArrowUpLeft size={16} /></a>
+          <a href="#projects" onClick={closeMenu}>مشاريعنا</a>
+          <a href="#vision" onClick={closeMenu}>رؤيتنا</a>
+          <a href="#contact" className="nav-contact" onClick={closeMenu}>تواصل معنا <ArrowUpLeft size={15} /></a>
         </nav>
       </header>
 
-      <main id="top">
-        <section className="hero-section">
-          <div className="hero-text">
-            <p className="eyebrow"><span className="eyebrow-line" /> شركة سورية للحلول الذكية</p>
-            <h1>نبني أنظمة<br /><em>ترى، تقرر،</em><br />وتعمل.</h1>
-            <p className="hero-lede">نحوّل البرمجيات والأتمتة والذكاء الاصطناعي إلى أدوات عملية تمنح أعمالك قدرة أكبر على الفهم والتحكم والنمو.</p>
-            <a className="button button-light" href="#services">اكتشف مجالاتنا <ArrowLeft size={18} /></a>
+      <main id="home">
+        <section className="cover slide-frame">
+          <div className="corner corner-top" />
+          <div className="cover-copy">
+            <p className="mono-label">01 / COMPANY PROFILE</p>
+            <h1>سادة التحكم<br /><span>لحلول الأتمتة</span><br />والذكاء الاصطناعي</h1>
+            <p>شركة ناشئة متخصصة في حلول الأتمتة وهندسة الحواسيب، نطوّر أدوات واقعية للقطاعات التي تحتاج تقنية تصنع فرقًا يمكن قياسه.</p>
+            <a href="#projects" className="line-button">استكشف مشاريعنا <ArrowLeft size={17} /></a>
           </div>
-          <div className="hero-visual">
-            <img src={asset("/manus-storage/asyad-hero_bf5ec291.jpg")} alt="بيئة زراعية ذكية متصلة بأنظمة تحكم" />
-            <div className="hero-caption"><span>SC / 2026</span><span>SMART SYSTEMS</span></div>
-            <div className="hero-pin"><span className="pin-dot" /><span>من الفكرة<br />إلى الأثر</span></div>
-          </div>
-          <div className="hero-index">01 <span /> 04</div>
-          <div className="scroll-cue"><ChevronDown size={17} /> مرّر للاستكشاف</div>
+          <figure className="cover-image image-frame">
+            <img src="/manus-storage/sada-hero-incubator_506236b7.jpg" alt="تصميم حاضنة بيض مؤتمتة من مشاريع سادة التحكم" />
+            <figcaption>SMART INCUBATION SYSTEM / 01</figcaption>
+          </figure>
+          <div className="cover-grid" aria-hidden="true"><span /><span /><span /></div>
+          <div className="cover-index">01 <i /> 05</div>
         </section>
 
-        <section className="intro-section section-pad" id="about">
-          <div className="section-label"><span>02</span><span className="label-line" /> من نحن</div>
-          <div className="intro-copy">
-            <h2>التقنية الأفضل هي التي <span>تخدم الواقع.</span></h2>
-            <p>في سادة التحكم، لا نطارد التعقيد من أجل التعقيد. نبدأ من احتياج حقيقي، ثم نستخدم الأدوات المناسبة — من البرمجيات والتطبيقات إلى الحساسات والرؤية الحاسوبية — لبناء حل يمكن فهمه وتشغيله وتطويره.</p>
-            <div className="intro-note"><Sparkles size={18} /><span>نمزج عقلية المهندس بفضول المبتكر.</span></div>
+        <section className="about-section slide-frame" id="about">
+          <div className="section-kicker"><span>02</span><i /> مجالات عملنا</div>
+          <div className="about-grid">
+            <h2>حلول تبني<br /><em>أثرًا حقيقيًا.</em></h2>
+            <div className="about-list">
+              <p><b>01</b> تصميم وتنفيذ أنظمة ومكنات مؤتمتة.</p>
+              <p><b>02</b> برمجة تطبيقات الموبايل والحاسوب.</p>
+              <p><b>03</b> الاستشارات التقنية في مجال الأتمتة.</p>
+            </div>
           </div>
-          <div className="intro-aside"><strong>01</strong><span>رؤية<br />عملية</span><p>حلول مصممة لتعمل خارج الشاشة، في المصنع والحقل والمختبر.</p></div>
+          <div className="black-corner" />
         </section>
 
-        <section className="services-section section-pad" id="services">
-          <div className="services-head"><div className="section-label"><span>03</span><span className="label-line" /> ماذا نفعل</div><h2>أربع طرق<br /><span>لصناعة فرق.</span></h2><p>مجالات متقاطعة، يجمعها هدف واحد: تحويل البيانات والأفكار إلى قرارات وأنظمة تعمل.</p></div>
-          <div className="services-grid">
-            {services.map(({ index, icon: Icon, title, text }) => <article className="service-card" key={index}><div className="service-top"><span>{index}</span><Icon size={24} strokeWidth={1.5} /></div><h3>{title}</h3><p>{text}</p><ArrowUpLeft className="card-arrow" size={21} /></article>)}
+        <section className="projects-section" id="projects">
+          <div className="section-head slide-frame">
+            <div className="section-kicker"><span>03</span><i /> منتجاتنا ومشاريعنا</div>
+            <p>خمسة مشاريع طُوّرت انطلاقًا من احتياج واقعي، بين الأتمتة الصناعية، البرمجيات، والحلول الزراعية.</p>
+          </div>
+          <div className="projects-stack">
+            {projects.map((project) => (
+              <article className={`project-row ${project.tone}`} key={project.number}>
+                <div className="project-number">{project.number}</div>
+                <div className="project-info">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <span className="project-note">{project.note}</span>
+                </div>
+                <div className="project-visual">
+                  {project.image ? (
+                    <img src={project.image} alt={project.alt} />
+                  ) : (
+                    <div className="cnc-visual" aria-label="مشروع مكنة CNC">
+                      <span>CNC</span><i /><b>WOOD ROUTER</b>
+                    </div>
+                  )}
+                </div>
+                <ChevronLeft className="project-arrow" size={24} strokeWidth={1.5} />
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="project-section section-pad" id="project">
-          <div className="project-image"><img src={asset("/manus-storage/sada-control-egg-sorter_76a1493a.jpg")} alt="آلية حضن وفرز البيض المطورة من سادة التحكم" /><span className="image-tag">CASE / 001</span></div>
-          <div className="project-copy"><div className="section-label"><span>04</span><span className="label-line" /> من مشاريعنا</div><h2>حين يرى النظام<br /><span>ما لا تراه العين.</span></h2><p>نظام حضن وفرز البيض بالذكاء الاصطناعي، حاصل على براءة اختراع سورية. مشروع يجمع الميكاترونيك، الرؤية الحاسوبية، والتحكم الآلي في منظومة واحدة.</p><a className="text-link" href="#contact">تعرّف على إمكانات التعاون <ArrowLeft size={18} /></a><div className="project-stat"><strong>AI</strong><span>رؤية حاسوبية<br />في خدمة الإنتاج</span></div></div>
+        <section className="vision-section slide-frame" id="vision">
+          <div className="vision-title"><div className="section-kicker"><span>04</span><i /> رؤيتنا</div><h2>تقنية محلية<br />لمستقبل <em>منتِج.</em></h2></div>
+          <div className="vision-copy"><p>استخدام التقنيات الحديثة في الصناعات السورية والاستفادة من الخبرات المحلية للنهوض بمستوى الصناعة السورية.</p><p>نطمح إلى انتقال سورية من بلد مستهلك للتقنيات الحديثة إلى بلد منتج لأحدث التقنيات والأدوات التي تعتمد بشكل أساسي على الذكاء الاصطناعي، مع تدريب الشباب الناشئ عقليًا ومهاريًا على مواكبة التطورات.</p></div>
+          <div className="vision-lines" aria-hidden="true"><span /><span /><span /></div>
         </section>
 
-        <section className="method-section section-pad"><div className="method-heading"><div className="section-label"><span>05</span><span className="label-line" /> كيف نعمل</div><h2>من السؤال<br /><span>إلى النظام.</span></h2></div><div className="steps-list">{steps.map(([num, title, text]) => <div className="step" key={num}><span className="step-num">{num}</span><div><h3>{title}</h3><p>{text}</p></div><ArrowUpLeft size={20} /></div>)}</div></section>
-
-        <section className="contact-section" id="contact"><div className="contact-image"><img src={asset("/manus-storage/sada-control-vision-sensor_d02cd2c2.jpg")} alt="حساسات ورؤية حاسوبية في نظام فرز البيض" /></div><div className="contact-copy"><div className="section-label light-label"><span>06</span><span className="label-line" /> لنبنِ القادم</div><h2>لديك فكرة<br /><em>تستحق أن تعمل؟</em></h2><p>أخبرنا عن التحدي الذي تريد تحويله إلى حل. سنبدأ من حيث أنت.</p><a className="button button-green" href="mailto:nomandawod96@gmail.com">تواصل معنا <ArrowLeft size={18} /></a><div className="contact-meta"><a href="mailto:nomandawod96@gmail.com">nomandawod96@gmail.com</a><a href="tel:+963982401070">+963 982 401 070 — دمشق، سورية</a></div></div></section>
+        <section className="contact-section slide-frame" id="contact">
+          <div className="contact-ink"><p className="mono-label">05 / LET'S TALK</p><h2>لنحوّل الفكرة<br />إلى <em>نظام يعمل.</em></h2><p>نرحب بمناقشة احتياجاتك في الأتمتة والبرمجيات والذكاء الاصطناعي.</p><a className="contact-action" href="mailto:nomandawod96@gmail.com">راسلنا الآن <ArrowLeft size={17} /></a></div>
+          <div className="contact-details"><a href="tel:+963982401070"><Phone size={17} /> +963 982 401 070</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> nomandawod96@gmail.com</a><span>دمشق، سورية — طريق المطار</span></div>
+        </section>
       </main>
 
-      <footer className="site-footer"><a className="brand footer-brand" href="#top"><span className="brand-mark"><img src={asset("/manus-storage/asyad-control-mark_b1e340c2.png")} alt="" /></span><span><strong>سادة</strong><small>التحكم</small></span></a><p>برمجيات. أتمتة. ذكاء اصطناعي.</p><span>© 2026 سادة التحكم</span></footer>
+      <footer className="footer"><div className="footer-name">سادة التحكم <span>لحلول الأتمتة والذكاء الاصطناعي</span></div><span>© 2026</span></footer>
     </div>
   );
 }
