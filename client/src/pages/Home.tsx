@@ -24,20 +24,20 @@ const services = [
   {
     index: "01",
     icon: Cpu,
-    title: "برمجيات تعمل بوضوح",
-    text: "نصمم أنظمة وبرامج مخصصة تختصر التعقيد وتمنح فريقك رؤية أدق وتحكمًا أسرع.",
+    title: "برمجيات ومنصات مخصصة",
+    text: "نصمم ونطوّر مواقع الويب وتطبيقات الجوال والأنظمة التي تختصر التعقيد وتمنح فريقك رؤية أدق.",
   },
   {
     index: "02",
     icon: Factory,
-    title: "أتمتة صناعية موثوقة",
-    text: "نحوّل العمليات المتكررة إلى خطوط أكثر اتساقًا، مع مراقبة وتحكم قابلين للقياس.",
+    title: "حلول أتمتة موثوقة",
+    text: "نحوّل العمليات المتكررة إلى أنظمة أكثر اتساقًا، مع مراقبة وتحكم قابلين للقياس.",
   },
   {
     index: "03",
     icon: Leaf,
-    title: "زراعة ذكية متصلة",
-    text: "نربط الحساسات والبيانات بالقرار، لتصبح مواردك الزراعية أكثر كفاءة واستدامة.",
+    title: "حلول زراعية ذكية",
+    text: "نربط الحساسات والبيانات بالقرار، لتصبح الموارد الزراعية أكثر كفاءة واستدامة.",
   },
   {
     index: "04",
@@ -60,9 +60,9 @@ export default function Home() {
   return (
     <div className="site-shell" dir="rtl">
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="أسياد التحكم - الصفحة الرئيسية" onClick={closeMenu}>
+        <a className="brand" href="#top" aria-label="سادة التحكم - الصفحة الرئيسية" onClick={closeMenu}>
           <span className="brand-mark"><img src={asset("/manus-storage/asyad-control-mark_b1e340c2.png")} alt="" /></span>
-          <span><strong>أسياد</strong><small>التحكم</small></span>
+          <span><strong>سادة</strong><small>التحكم</small></span>
         </a>
         <button className="menu-toggle" type="button" aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -96,7 +96,7 @@ export default function Home() {
           <div className="section-label"><span>02</span><span className="label-line" /> من نحن</div>
           <div className="intro-copy">
             <h2>التقنية الأفضل هي التي <span>تخدم الواقع.</span></h2>
-            <p>في أسياد التحكم، لا نطارد التعقيد من أجل التعقيد. نبدأ من احتياج حقيقي، ثم نستخدم الأدوات المناسبة — من البرمجة إلى الحساسات والرؤية الحاسوبية — لبناء حل يمكن فهمه وتشغيله وتطويره.</p>
+            <p>في سادة التحكم، لا نطارد التعقيد من أجل التعقيد. نبدأ من احتياج حقيقي، ثم نستخدم الأدوات المناسبة — من البرمجيات والتطبيقات إلى الحساسات والرؤية الحاسوبية — لبناء حل يمكن فهمه وتشغيله وتطويره.</p>
             <div className="intro-note"><Sparkles size={18} /><span>نمزج عقلية المهندس بفضول المبتكر.</span></div>
           </div>
           <div className="intro-aside"><strong>01</strong><span>رؤية<br />عملية</span><p>حلول مصممة لتعمل خارج الشاشة، في المصنع والحقل والمختبر.</p></div>
@@ -110,16 +110,16 @@ export default function Home() {
         </section>
 
         <section className="project-section section-pad" id="project">
-          <div className="project-image"><img src={asset("/manus-storage/asyad-ai-vision_08f476f4.jpg")} alt="نظام رؤية حاسوبية لفرز البيض" /><span className="image-tag">CASE / 001</span></div>
+          <div className="project-image"><img src={asset("/manus-storage/sada-control-egg-sorter_76a1493a.jpg")} alt="آلية حضن وفرز البيض المطورة من سادة التحكم" /><span className="image-tag">CASE / 001</span></div>
           <div className="project-copy"><div className="section-label"><span>04</span><span className="label-line" /> من مشاريعنا</div><h2>حين يرى النظام<br /><span>ما لا تراه العين.</span></h2><p>نظام حضن وفرز البيض بالذكاء الاصطناعي، حاصل على براءة اختراع سورية. مشروع يجمع الميكاترونيك، الرؤية الحاسوبية، والتحكم الآلي في منظومة واحدة.</p><a className="text-link" href="#contact">تعرّف على إمكانات التعاون <ArrowLeft size={18} /></a><div className="project-stat"><strong>AI</strong><span>رؤية حاسوبية<br />في خدمة الإنتاج</span></div></div>
         </section>
 
         <section className="method-section section-pad"><div className="method-heading"><div className="section-label"><span>05</span><span className="label-line" /> كيف نعمل</div><h2>من السؤال<br /><span>إلى النظام.</span></h2></div><div className="steps-list">{steps.map(([num, title, text]) => <div className="step" key={num}><span className="step-num">{num}</span><div><h3>{title}</h3><p>{text}</p></div><ArrowUpLeft size={20} /></div>)}</div></section>
 
-        <section className="contact-section" id="contact"><div className="contact-image"><img src={asset("/manus-storage/asyad-smart-farm_b87dfe0f.jpg")} alt="حقول زراعية متصلة بالبيانات" /></div><div className="contact-copy"><div className="section-label light-label"><span>06</span><span className="label-line" /> لنبنِ القادم</div><h2>لديك فكرة<br /><em>تستحق أن تعمل؟</em></h2><p>أخبرنا عن التحدي الذي تريد تحويله إلى حل. سنبدأ من حيث أنت.</p><a className="button button-green" href="mailto:hello@asyad-control.com">تواصل معنا <ArrowLeft size={18} /></a><div className="contact-meta"><span>hello@asyad-control.com</span><span>سورية — نعمل عن بُعد</span></div></div></section>
+        <section className="contact-section" id="contact"><div className="contact-image"><img src={asset("/manus-storage/sada-control-vision-sensor_d02cd2c2.jpg")} alt="حساسات ورؤية حاسوبية في نظام فرز البيض" /></div><div className="contact-copy"><div className="section-label light-label"><span>06</span><span className="label-line" /> لنبنِ القادم</div><h2>لديك فكرة<br /><em>تستحق أن تعمل؟</em></h2><p>أخبرنا عن التحدي الذي تريد تحويله إلى حل. سنبدأ من حيث أنت.</p><a className="button button-green" href="mailto:nomandawod96@gmail.com">تواصل معنا <ArrowLeft size={18} /></a><div className="contact-meta"><a href="mailto:nomandawod96@gmail.com">nomandawod96@gmail.com</a><a href="tel:+963982401070">+963 982 401 070 — دمشق، سورية</a></div></div></section>
       </main>
 
-      <footer className="site-footer"><a className="brand footer-brand" href="#top"><span className="brand-mark"><img src={asset("/manus-storage/asyad-control-mark_b1e340c2.png")} alt="" /></span><span><strong>أسياد</strong><small>التحكم</small></span></a><p>برمجيات. أتمتة. ذكاء اصطناعي.</p><span>© 2026 أسياد التحكم</span></footer>
+      <footer className="site-footer"><a className="brand footer-brand" href="#top"><span className="brand-mark"><img src={asset("/manus-storage/asyad-control-mark_b1e340c2.png")} alt="" /></span><span><strong>سادة</strong><small>التحكم</small></span></a><p>برمجيات. أتمتة. ذكاء اصطناعي.</p><span>© 2026 سادة التحكم</span></footer>
     </div>
   );
 }
