@@ -3,6 +3,7 @@
  */
 import { ArrowLeft, ArrowUpLeft, ChevronLeft, Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import "../polish.css";
 
 const projects = [
   {
@@ -69,6 +70,7 @@ export default function Home() {
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           <a href="#about" onClick={closeMenu}>عن الشركة</a>
           <a href="#projects" onClick={closeMenu}>مشاريعنا</a>
+          <a href="#achievements" onClick={closeMenu}>إنجازاتنا</a>
           <a href="#team" onClick={closeMenu}>فريقنا</a>
           <a href="#vision" onClick={closeMenu}>رؤيتنا</a>
           <a href="#contact" className="nav-contact" onClick={closeMenu}>تواصل معنا <ArrowUpLeft size={15} /></a>
@@ -144,6 +146,15 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="achievements-section slide-frame" id="achievements">
+          <div className="achievements-intro"><div className="section-kicker"><span>04</span><i /> إنجازات موثقة</div><h2>دليل على أن<br /><em>الفكرة تعمل.</em></h2></div>
+          <div className="achievements-list">
+            <article><span>01</span><h3>براءة اختراع محلية</h3><p>الحصول على براءة اختراع لجهاز حاضنة البيض الذكية.</p></article>
+            <article><span>02</span><h3>مشاركات ومعارض</h3><p>High-tech 2024، serfiks 2024، ومعرض دمشق الدولي 2025.</p></article>
+            <article><span>03</span><h3>مسابقات ريادية</h3><p>الوصول إلى المراحل النهائية في فرصة 2024 وScale Up 2025.</p></article>
+          </div>
+        </section>
+
         <section className="vision-section slide-frame" id="vision">
           <div className="vision-title"><div className="section-kicker"><span>04</span><i /> رؤيتنا</div><h2>تقنية محلية<br />لمستقبل <em>منتِج.</em></h2></div>
           <div className="vision-copy"><p>استخدام التقنيات الحديثة في الصناعات السورية والاستفادة من الخبرات المحلية للنهوض بمستوى الصناعة السورية.</p><p>نطمح إلى انتقال سورية من بلد مستهلك للتقنيات الحديثة إلى بلد منتج لأحدث التقنيات والأدوات التي تعتمد بشكل أساسي على الذكاء الاصطناعي، مع تدريب الشباب الناشئ عقليًا ومهاريًا على مواكبة التطورات.</p></div>
@@ -161,7 +172,7 @@ export default function Home() {
 
         <section className="contact-section slide-frame" id="contact">
           <div className="contact-ink"><p className="mono-label">05 / LET'S TALK</p><h2>لنحوّل الفكرة<br />إلى <em>نظام يعمل.</em></h2><p>نرحب بمناقشة احتياجاتك في الأتمتة والبرمجيات والذكاء الاصطناعي.</p><a className="contact-action" href="mailto:nomandawod96@gmail.com">راسلنا الآن <ArrowLeft size={17} /></a></div>
-          <div className="contact-details"><a href="tel:+963982401070"><Phone size={17} /> +963 982 401 070</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> nomandawod96@gmail.com</a><span>دمشق، سورية — طريق المطار</span></div>
+          <div className="contact-details"><a className="whatsapp-link" href="https://wa.me/963982401070" target="_blank" rel="noreferrer"><Phone size={17} /> تواصل عبر واتساب</a><a href="tel:+963982401070"><Phone size={17} /> +963 982 401 070</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> nomandawod96@gmail.com</a><span>دمشق، سورية — طريق المطار</span></div>
         </section>
       </main>
 
