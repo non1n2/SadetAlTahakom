@@ -14,6 +14,7 @@ const projects = [
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/HbpOYOxJysjpnCXR.jpg",
     alt: "آلية حضن وفرز البيض المطورة من سادة التحكم",
     tone: "wood",
+    path: "projects/smart-incubator",
   },
   {
     number: "02",
@@ -23,6 +24,7 @@ const projects = [
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/MDfzByinmkrhsRps.jpg",
     alt: "وحدة رؤية ومراقبة مستخدمة ضمن نظام AutoMate X",
     tone: "soft",
+    path: "projects/automatex",
   },
   {
     number: "03",
@@ -32,6 +34,7 @@ const projects = [
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nnemqAteitXKqRUg.jpg",
     alt: "واجهات تطبيق مدرسة عبد القادر بدران الشرعية",
     tone: "green",
+    path: null,
   },
   {
     number: "04",
@@ -41,6 +44,7 @@ const projects = [
     image: null,
     alt: "",
     tone: "technical",
+    path: null,
   },
   {
     number: "05",
@@ -50,6 +54,7 @@ const projects = [
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/WEATcOkfgBRxRptC.jpg",
     alt: "صينية شتل زراعية مطورة ضمن مشاريع الشركة",
     tone: "sand",
+    path: null,
   },
 ];
 
@@ -123,26 +128,22 @@ export default function Home() {
             <p>خمسة مشاريع طُوّرت انطلاقًا من احتياج واقعي، بين الأتمتة الصناعية، البرمجيات، والحلول الزراعية.</p>
           </div>
           <div className="projects-stack">
-            {projects.map((project) => (
-              <article className={`project-row ${project.tone}`} key={project.number}>
+            {projects.map((project) => {
+              const content = <>
                 <div className="project-number">{project.number}</div>
                 <div className="project-info">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <span className="project-note">{project.note}</span>
+                  <span className="project-note">{project.note}{project.path ? " · اضغط للتفاصيل" : ""}</span>
                 </div>
                 <div className="project-visual">
-                  {project.image ? (
-                    <img src={project.image} alt={project.alt} />
-                  ) : (
-                    <div className="cnc-visual" aria-label="مشروع مكنة CNC">
-                      <span>CNC</span><i /><b>WOOD ROUTER</b>
-                    </div>
-                  )}
+                  {project.image ? <img src={project.image} alt={project.alt} /> : <div className="cnc-visual" aria-label="مشروع مكنة CNC"><span>CNC</span><i /><b>WOOD ROUTER</b></div>}
                 </div>
                 <ChevronLeft className="project-arrow" size={24} strokeWidth={1.5} />
-              </article>
-            ))}
+              </>;
+
+              return project.path ? <a href={`#/${project.path}`} className={`project-row project-link ${project.tone}`} key={project.number} aria-label={`عرض تفاصيل ${project.title}`}>{content}</a> : <article className={`project-row ${project.tone}`} key={project.number}>{content}</article>;
+            })}
           </div>
         </section>
 

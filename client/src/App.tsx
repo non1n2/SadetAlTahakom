@@ -1,8 +1,24 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Route, Router, Switch } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import { AutoMateXDetail, SmartIncubatorDetail } from "./pages/ProjectDetail";
+
+function AppRoutes() {
+  return (
+    <Router hook={useHashLocation}>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/projects/smart-incubator" component={SmartIncubatorDetail} />
+        <Route path="/projects/automatex" component={AutoMateXDetail} />
+        <Route component={Home} />
+      </Switch>
+    </Router>
+  );
+}
 
 function App() {
   return (
@@ -13,7 +29,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Home />
+          <AppRoutes />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
