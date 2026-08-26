@@ -88,7 +88,7 @@ export default function Home() {
           <div className="corner corner-top" />
           <div className="cover-copy">
             <p className="mono-label">01 / COMPANY PROFILE</p>
-            <h1>سادة التحكم<br /><span>لحلول الأتمتة</span><br />والذكاء الاصطناعي</h1>
+            <h1 className="cover-brand-title"><span className="sr-only">سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nOdSyXACWGFuaZeb.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></h1>
             <p>شركة ناشئة متخصصة في حلول الأتمتة وهندسة الحواسيب، نطوّر أدوات واقعية للقطاعات التي تحتاج تقنية تصنع فرقًا يمكن قياسه.</p>
             <a href="#projects" className="line-button">استكشف مشاريعنا <ArrowLeft size={17} /></a>
           </div>
