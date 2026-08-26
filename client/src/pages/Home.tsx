@@ -4,6 +4,7 @@
 import { ArrowLeft, ArrowUpLeft, ChevronLeft, Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import "../polish.css";
+import "../logo.css";
 
 const projects = [
   {
@@ -65,9 +66,8 @@ export default function Home() {
   return (
     <div className="ppt-site" dir="rtl">
       <header className="topbar">
-        <a href="#home" className="wordmark" aria-label="سادة التحكم - الصفحة الرئيسية" onClick={closeMenu}>
-          <span>سادة التحكم</span>
-          <small>لحلول الأتمتة والذكاء الاصطناعي</small>
+        <a href="#home" className="wordmark logo-wordmark" aria-label="سادة التحكم - الصفحة الرئيسية" onClick={closeMenu}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nOdSyXACWGFuaZeb.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" />
         </a>
         <button className="menu-button" type="button" onClick={() => setMenuOpen((value) => !value)} aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"}>
           {menuOpen ? <X size={21} /> : <Menu size={21} />}

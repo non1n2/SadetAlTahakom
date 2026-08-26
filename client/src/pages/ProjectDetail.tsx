@@ -1,6 +1,7 @@
 /* Design reference: صفحات مشروع تحريرية مستلهمة من تسلسل العرض، بصور أصلية دون إطارات. */
 import { ArrowLeft, Check, Mail, Phone } from "lucide-react";
 import "../project-detail.css";
+import "../logo.css";
 
 type DetailData = {
   index: string;
@@ -84,7 +85,7 @@ function DetailPage({ data }: { data: DetailData }) {
     <div className={`detail-page detail-${data.theme}`} dir="rtl">
       <header className="detail-nav">
         <a href="#/" className="detail-back"><ArrowLeft size={18} /> العودة إلى المشاريع</a>
-        <div className="detail-brand"><strong>سادة التحكم</strong><span>حلول الأتمتة والذكاء الاصطناعي</span></div>
+        <a href="#/" className="detail-brand detail-logo" aria-label="سادة التحكم - الصفحة الرئيسية"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nOdSyXACWGFuaZeb.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></a>
       </header>
       <main>
         <section className="detail-hero">
