@@ -87,7 +87,6 @@ export default function Home() {
         <section className="cover slide-frame">
           <div className="corner corner-top" />
           <div className="cover-copy">
-            <p className="mono-label">01 / سادة التحكم</p>
             <h1 className="cover-brand-title"><span className="sr-only">سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></h1>
             <p>شركة ناشئة متخصصة في حلول الأتمتة وهندسة الحواسيب، نطوّر أدوات واقعية للقطاعات التي تحتاج تقنية تصنع فرقًا يمكن قياسه.</p>
             <a href="#projects" className="line-button">استكشف مشاريعنا <ArrowLeft size={17} /></a>
@@ -111,7 +110,6 @@ export default function Home() {
         </section>
 
         <section className="about-section slide-frame" id="about">
-          <div className="section-kicker"><span>02</span><i /> مجالات عملنا</div>
           <div className="about-grid">
             <h2>حلول تبني<br /><em>أثرًا حقيقيًا.</em></h2>
             <div className="about-list">
@@ -125,7 +123,6 @@ export default function Home() {
 
         <section className="projects-section" id="projects">
           <div className="section-head slide-frame">
-            <div className="section-kicker"><span>03</span><i /> منتجاتنا ومشاريعنا</div>
             <p>خمسة مشاريع طُوّرت انطلاقًا من احتياج واقعي، بين الأتمتة الصناعية، البرمجيات، والحلول الزراعية.</p>
           </div>
           <div className="projects-stack">
@@ -149,7 +146,7 @@ export default function Home() {
         </section>
 
         <section className="achievements-section slide-frame" id="achievements">
-          <div className="achievements-intro"><div className="section-kicker"><span>04</span><i /> إنجازات موثقة</div><h2>إنجازات<br /><em>سادة التحكم.</em></h2></div>
+          <div className="achievements-intro"><h2>إنجازات<br /><em>سادة التحكم.</em></h2></div>
           <div className="achievements-list">
             <article><span>01</span><h3>براءة اختراع محلية</h3><p>الحصول على براءة اختراع لجهاز حاضنة البيض الذكية.</p></article>
             <article><span>02</span><h3>مشاركات ومعارض</h3><p>High-tech 2024، serfiks 2024، ومعرض دمشق الدولي 2025.</p></article>
@@ -158,22 +155,22 @@ export default function Home() {
         </section>
 
         <section className="vision-section slide-frame" id="vision">
-          <div className="vision-title"><div className="section-kicker"><span>04</span><i /> رؤيتنا</div><h2>تقنية محلية<br />لمستقبل <em>منتِج.</em></h2></div>
+          <div className="vision-title"><h2>تقنية محلية<br />لمستقبل <em>منتِج.</em></h2></div>
           <div className="vision-copy"><p>استخدام التقنيات الحديثة في الصناعات السورية والاستفادة من الخبرات المحلية للنهوض بمستوى الصناعة السورية.</p><p>نطمح إلى انتقال سورية من بلد مستهلك للتقنيات الحديثة إلى بلد منتج لأحدث التقنيات والأدوات التي تعتمد بشكل أساسي على الذكاء الاصطناعي، مع تدريب الشباب الناشئ عقليًا ومهاريًا على مواكبة التطورات.</p></div>
           <div className="vision-lines" aria-hidden="true"><span /><span /><span /></div>
         </section>
 
         <section className="team-section slide-frame" id="team">
-          <div className="team-head"><div className="section-kicker"><span>05</span><i /> فريق العمل</div><h2>خبرات محلية<br />تعمل <em>كفريق واحد.</em></h2></div>
+          <div className="team-head"><h2>خبرات محلية<br />تعمل <em>كفريق واحد.</em></h2></div>
           <div className="team-intro">نؤمن بأن أفضل الحلول تبدأ من فريق يفهم التقنية ويفهم الواقع الذي سيعمل فيه النظام.</div>
           <div className="team-grid">
-            <article className="team-member"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/SPhoBveBPajwKozG.jpg" alt="نعمان داود" /><div><span>01 / المؤسسون</span><h3>نعمان داود</h3><p>المدير التنفيذي</p></div></article>
-            <article className="team-member"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/PpqEzUuVVnOmyYkm.jpg" alt="همام الشيخ" /><div><span>02 / المؤسسون</span><h3>همام الشيخ</h3><p>مسؤول العلاقات العامة</p></div></article>
+            <article className="team-member"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/SPhoBveBPajwKozG.jpg" alt="نعمان داود" /><div><h3>نعمان داود</h3><p>المدير التنفيذي</p></div></article>
+            <article className="team-member"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/PpqEzUuVVnOmyYkm.jpg" alt="همام الشيخ" /><div><h3>همام الشيخ</h3><p>مسؤول العلاقات العامة</p></div></article>
           </div>
         </section>
 
         <section className="contact-section slide-frame" id="contact">
-          <div className="contact-ink"><p className="mono-label">05 / تواصل معنا</p><h2>تواصل مع<br /><em>سادة التحكم.</em></h2><p>للتواصل حول حلول الأتمتة والبرمجيات والذكاء الاصطناعي.</p><a className="contact-action" href="mailto:nomandawod96@gmail.com">راسلنا الآن <ArrowLeft size={17} /></a></div>
+          <div className="contact-ink"><h2>تواصل مع<br /><em>سادة التحكم.</em></h2><p>للتواصل حول حلول الأتمتة والبرمجيات والذكاء الاصطناعي.</p><a className="contact-action" href="mailto:nomandawod96@gmail.com">راسلنا الآن <ArrowLeft size={17} /></a></div>
           <div className="contact-details"><a className="whatsapp-link" href="https://wa.me/963982401070" target="_blank" rel="noreferrer"><Phone size={17} /> تواصل عبر واتساب</a><a href="tel:+963982401070"><Phone size={17} /> +963 982 401 070</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> nomandawod96@gmail.com</a><span>دمشق، سورية — طريق المطار</span></div>
         </section>
       </main>
