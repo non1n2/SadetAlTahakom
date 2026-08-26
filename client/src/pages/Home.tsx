@@ -110,6 +110,7 @@ export default function Home() {
         </section>
 
         <section className="about-section slide-frame" id="about">
+          <div className="section-kicker section-heading"><i aria-hidden="true" /><b>مجالات عملنا</b></div>
           <div className="about-grid">
             <h2>حلول تبني<br /><em>أثرًا حقيقيًا.</em></h2>
             <div className="about-list">
@@ -123,6 +124,7 @@ export default function Home() {
 
         <section className="projects-section" id="projects">
           <div className="section-head slide-frame">
+            <div className="section-kicker section-heading"><i aria-hidden="true" /><b>منتجاتنا ومشاريعنا</b></div>
             <p>خمسة مشاريع طُوّرت انطلاقًا من احتياج واقعي، بين الأتمتة الصناعية، البرمجيات، والحلول الزراعية.</p>
           </div>
           <div className="projects-stack">
