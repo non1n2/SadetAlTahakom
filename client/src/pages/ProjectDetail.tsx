@@ -30,13 +30,13 @@ type DetailData = {
 
 const incubator: DetailData = {
   index: "01",
-  eyebrow: "SMART INCUBATION SYSTEM",
+  eyebrow: "نظام حضن وفرز ذكي",
   title: "حاضنة وفرز البيض",
   accentTitle: "بالذكاء الاصطناعي",
   intro: "نظام محلي يجمع الحضانة المؤتمتة والرؤية الحاسوبية لتمييز البيض غير القابل للفقس مبكرًا، وتحسين الاستفادة من سعة الحاضنة.",
   heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/oofbpOUxlEdWYCZh.jpg",
   heroAlt: "المسار الميكانيكي والحساسات داخل الحاضنة الذكية",
-  heroLabel: "PROTOTYPE / COMPUTER VISION",
+  heroLabel: "نموذج أولي · رؤية حاسوبية",
   problemTitle: "المشكلة تبدأ من مساحة لا تنتج.",
   problem: "استمرار حجز شاغر في الحاضنة لبيضة ملقحة ولكن ميتة من الأيام الأولى للاحتضان يهدر جزءًا من الطاقة الإنتاجية المتاحة.",
   problemPoints: ["إدارة أدق لمساحة الحاضنة", "ظروف بيئية مناسبة للاحتضان", "فرز مبكر يعتمد على الرؤية الحاسوبية"],
@@ -57,13 +57,13 @@ const incubator: DetailData = {
 
 const automatex: DetailData = {
   index: "02",
-  eyebrow: "AUTOMATION & TRACKING SYSTEM",
+  eyebrow: "نظام أتمتة ومتابعة",
   title: "AutoMate",
   accentTitle: "X",
   intro: "نظام أتمتة ومراقبة لخطوط إنتاج معامل الألبسة، مصمم لتحويل متابعة القطعة الواحدة إلى بيانات تشغيلية قابلة للقراءة من المكتب أو عن بُعد.",
   heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/vxDTHSvgWFfQRiUO.jpg",
   heroAlt: "بيئة عمل في معمل ألبسة",
-  heroLabel: "CLOTHING FACTORY / TRACKING",
+  heroLabel: "معمل ألبسة · متابعة الإنتاج",
   problemTitle: "عندما تكون البيانات خلف خط الإنتاج.",
   problem: "تواجه معامل الألبسة تحديات مرتبطة بنقص الكفاءة، وصعوبة تتبع الإنتاج، وعدم الدقة في التخطيط التشغيلي.",
   problemPoints: ["صعوبة معرفة موقع القطعة ضمن الخط", "متابعة يدوية متأخرة للإنتاج", "تخطيط أقل دقة للعمليات اليومية"],
@@ -84,13 +84,13 @@ const automatex: DetailData = {
 
 const school: DetailData = {
   index: "03",
-  eyebrow: "SCHOOL MANAGEMENT SYSTEM",
+  eyebrow: "نظام إدارة مدرسي",
   title: "تطبيق مدرسة عبد القادر بدران",
   accentTitle: "الشرعية",
   intro: "نظام إدارة شامل يربط تسجيل الطلاب وتنظيم العمل الإداري ومتابعة الأهل ضمن تجربة رقمية أبسط للمدرسة.",
   heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nnemqAteitXKqRUg.jpg",
   heroAlt: "واجهات تطبيق مدرسة عبد القادر بدران الشرعية",
-  heroLabel: "SCHOOL MANAGEMENT / MOBILE",
+  heroLabel: "إدارة مدرسية · تطبيق موبايل",
   problemTitle: "الإدارة المدرسية تحتاج مسارًا موحدًا.",
   problem: "تعدد المعاملات الورقية بين مكاتب المدرسة وغياب قناة واضحة لمتابعة الأهل يرفعان عبء العمل اليومي ويؤخران الوصول إلى المعلومة.",
   problemPoints: ["تسجيل طلاب يحتاج تنظيمًا أوضح", "معاملات ورقية بين مكاتب الإدارة", "متابعة الأهل لطلابهم تحتاج قناة مباشرة"],
@@ -111,13 +111,13 @@ const school: DetailData = {
 
 const cnc: DetailData = {
   index: "04",
-  eyebrow: "LOCAL CNC MANUFACTURING",
+  eyebrow: "تصميم وتصنيع محلي",
   title: "مكنة CNC",
   accentTitle: "لحفر الخشب",
   intro: "مشروع تصميم وتصنيع مكنة لحفر الخشب والنقش على الأبواب الخشبية، بخبرات محلية وخدمة صيانة سريعة.",
   heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/DqiAepxOrdKPAgHj.png",
   heroAlt: "تصميم مكنة CNC لحفر الخشب من مشاريع سادة التحكم",
-  heroLabel: "CNC / WOOD ROUTER",
+  heroLabel: "مكنة لحفر الخشب",
   problemTitle: "أداة إنتاج محلية لورشة الخشب.",
   problem: "يركز المشروع على تقديم مكنة مخصصة لحفر الخشب والنقش على الأبواب الخشبية، مع تصميم وتصنيع بخبرات محلية وخدمة صيانة داعمة.",
   problemPoints: ["حفر الخشب والنقش على الأبواب", "تصميم وتصنيع بخبرات محلية", "خدمات صيانة سريعة"],
@@ -128,7 +128,7 @@ const cnc: DetailData = {
     { number: "02", title: "تصنيع المكنة", copy: "تنفيذ مكنة لحفر الخشب والنقش على الأبواب." },
     { number: "03", title: "صيانة ودعم", copy: "تقديم خدمات صيانة بسرعة ومهارة حسب العرض التعريفي." },
   ],
-  metric: "LOCAL",
+  metric: "محلي",
   metricLabel: "تصميم وتصنيع مكنة بخبرات محلية",
   targetTitle: "المجال التطبيقي",
   audiences: ["ورش الخشب", "صنّاع الأبواب الخشبية", "أعمال الحفر والنقش"],
@@ -138,13 +138,13 @@ const cnc: DetailData = {
 
 const seedling: DetailData = {
   index: "05",
-  eyebrow: "SMART NURSERY TOOLS",
+  eyebrow: "أدوات للمشاتل",
   title: "أدوات زراعية",
   accentTitle: "لصواني الشتل",
   intro: "أدوات عملية لفنيي الزراعة وأصحاب المشاتل لتسهيل زراعة صواني الشتل وإدخال أساليب حديثة للمشاتل البلاستيكية.",
   heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/WEATcOkfgBRxRptC.jpg",
   heroAlt: "أداة وصينية شتل زراعية",
-  heroLabel: "SEEDLING TRAYS / NURSERY TOOLS",
+  heroLabel: "صواني شتل · أدوات زراعية",
   problemTitle: "عمليات شتل أبسط بتكلفة اقتصادية.",
   problem: "يتناول المشروع أدوات تستخدم من قبل الفني الزراعي وأصحاب المشاتل والعمال لتسهيل زراعة صواني الشتل وتطوير أساليب العمل في المشاتل البلاستيكية.",
   problemPoints: ["تسهيل زراعة صواني الشتل", "إتاحة الأدوات للفنيين والعمال", "تكلفة تشغيل زهيدة"],
@@ -155,7 +155,7 @@ const seedling: DetailData = {
     { number: "02", title: "تسهيل عمل الفني", copy: "تقديم أدوات قابلة للاستخدام من الفنيين وأصحاب المشاتل والعمال." },
     { number: "03", title: "تحديث أسلوب العمل", copy: "دعم إدخال أساليب حديثة للمشاتل البلاستيكية." },
   ],
-  metric: "LOW",
+  metric: "اقتصادي",
   metricLabel: "أدوات مساعدة بزمن وكلفة تشغيل اقتصاديين",
   targetTitle: "من يستخدم الأدوات؟",
   audiences: ["فنيّو الزراعة", "أصحاب المشاتل", "العمال الزراعيون"],
@@ -180,11 +180,11 @@ function DetailPage({ data }: { data: DetailData }) {
 
         <section className="detail-solution detail-section"><div className="detail-section-label">02 / الحل</div><div className="solution-copy"><h2>{data.solutionTitle}</h2><p>{data.solution}</p></div><div className="workflow">{data.workflow.map((step) => <article key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.copy}</p></article>)}</div></section>
 
-        <section className="detail-impact"><div className="impact-stat">{data.metric}</div><div><p className="detail-section-label">03 / الأثر</p><h2>{data.metricLabel}</h2><p>المعلومات المعروضة هنا مستندة إلى العرض التقديمي للمشروع، وتوضح اتجاه النظام وهدفه التشغيلي.</p></div></section>
+        <section className="detail-impact"><div className="impact-stat">{data.metric}</div><div><p className="detail-section-label">03 / الأثر</p><h2>{data.metricLabel}</h2></div></section>
 
         <section className="detail-target detail-section"><div className="detail-section-label">04 / الاستخدام</div><div><h2>{data.targetTitle}</h2><div className="target-list">{data.audiences.map((audience, index) => <span key={audience}><b>0{index + 1}</b>{audience}</span>)}</div></div></section>
 
-        <section className="detail-contact"><div><p className="detail-eyebrow">LET'S DISCUSS THE PROJECT</p><h2>هل تريد معرفة<br />المزيد عن <em>{data.title}؟</em></h2></div><div className="detail-contact-links"><a href="https://wa.me/963982401070" target="_blank" rel="noreferrer"><Phone size={17} /> تواصل عبر واتساب</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> راسلنا بالبريد</a></div></section>
+        <section className="detail-contact"><div><p className="detail-eyebrow">تواصل بشأن المشروع</p><h2>تواصل بشأن<br /><em>{data.title}</em></h2></div><div className="detail-contact-links"><a href="https://wa.me/963982401070" target="_blank" rel="noreferrer"><Phone size={17} /> تواصل عبر واتساب</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> راسلنا بالبريد</a></div></section>
       </main>
       <footer className="detail-footer"><span>سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><a href="#/">العودة للصفحة الرئيسية</a></footer>
     </div>

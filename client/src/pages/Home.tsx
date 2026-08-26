@@ -87,7 +87,7 @@ export default function Home() {
         <section className="cover slide-frame">
           <div className="corner corner-top" />
           <div className="cover-copy">
-            <p className="mono-label">01 / COMPANY PROFILE</p>
+            <p className="mono-label">01 / سادة التحكم</p>
             <h1 className="cover-brand-title"><span className="sr-only">سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></h1>
             <p>شركة ناشئة متخصصة في حلول الأتمتة وهندسة الحواسيب، نطوّر أدوات واقعية للقطاعات التي تحتاج تقنية تصنع فرقًا يمكن قياسه.</p>
             <a href="#projects" className="line-button">استكشف مشاريعنا <ArrowLeft size={17} /></a>
@@ -95,15 +95,15 @@ export default function Home() {
           <div className="cover-visuals">
             <figure className="cover-image hero-product">
               <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/zExURtowCysrXNwS.jpg" alt="تصميم حاضنة بيض مؤتمتة من مشاريع سادة التحكم" />
-              <figcaption>SMART INCUBATION SYSTEM / 01</figcaption>
+              <figcaption>الحاضنة الذكية</figcaption>
             </figure>
             <figure className="cover-image hero-sensor">
               <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/vtnSNLStfCLsEEGw.jpg" alt="حساس رؤية حاسوبية ضمن نظام فرز البيض" />
-              <figcaption>COMPUTER VISION</figcaption>
+              <figcaption>الرؤية الحاسوبية</figcaption>
             </figure>
             <figure className="cover-image hero-session">
               <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/qBWbdZxxrUabPyGq.jpg" alt="اجتماع لفريق سادة التحكم" />
-              <figcaption>LOCAL EXPERTISE</figcaption>
+              <figcaption>فريق العمل</figcaption>
             </figure>
           </div>
           <div className="cover-grid" aria-hidden="true"><span /><span /><span /></div>
@@ -135,7 +135,7 @@ export default function Home() {
                 <div className="project-info">
                   <div className="project-title-band"><h3>{project.title}</h3></div>
                   <p>{project.description}</p>
-                  <span className="project-note">{project.note}{project.path ? " · اضغط للتفاصيل" : ""}</span>
+                  <span className="project-note">{project.note}{project.path ? " · التفاصيل" : ""}</span>
                 </div>
                 <div className="project-visual">
                   {project.image ? <img src={project.image} alt={project.alt} /> : <div className="cnc-visual" aria-label="مشروع مكنة CNC"><span>CNC</span><i /><b>WOOD ROUTER</b></div>}
@@ -149,7 +149,7 @@ export default function Home() {
         </section>
 
         <section className="achievements-section slide-frame" id="achievements">
-          <div className="achievements-intro"><div className="section-kicker"><span>04</span><i /> إنجازات موثقة</div><h2>دليل على أن<br /><em>الفكرة تعمل.</em></h2></div>
+          <div className="achievements-intro"><div className="section-kicker"><span>04</span><i /> إنجازات موثقة</div><h2>إنجازات<br /><em>سادة التحكم.</em></h2></div>
           <div className="achievements-list">
             <article><span>01</span><h3>براءة اختراع محلية</h3><p>الحصول على براءة اختراع لجهاز حاضنة البيض الذكية.</p></article>
             <article><span>02</span><h3>مشاركات ومعارض</h3><p>High-tech 2024، serfiks 2024، ومعرض دمشق الدولي 2025.</p></article>
@@ -173,7 +173,7 @@ export default function Home() {
         </section>
 
         <section className="contact-section slide-frame" id="contact">
-          <div className="contact-ink"><p className="mono-label">05 / LET'S TALK</p><h2>لنحوّل الفكرة<br />إلى <em>نظام يعمل.</em></h2><p>نرحب بمناقشة احتياجاتك في الأتمتة والبرمجيات والذكاء الاصطناعي.</p><a className="contact-action" href="mailto:nomandawod96@gmail.com">راسلنا الآن <ArrowLeft size={17} /></a></div>
+          <div className="contact-ink"><p className="mono-label">05 / تواصل معنا</p><h2>تواصل مع<br /><em>سادة التحكم.</em></h2><p>للتواصل حول حلول الأتمتة والبرمجيات والذكاء الاصطناعي.</p><a className="contact-action" href="mailto:nomandawod96@gmail.com">راسلنا الآن <ArrowLeft size={17} /></a></div>
           <div className="contact-details"><a className="whatsapp-link" href="https://wa.me/963982401070" target="_blank" rel="noreferrer"><Phone size={17} /> تواصل عبر واتساب</a><a href="tel:+963982401070"><Phone size={17} /> +963 982 401 070</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> nomandawod96@gmail.com</a><span>دمشق، سورية — طريق المطار</span></div>
         </section>
       </main>
