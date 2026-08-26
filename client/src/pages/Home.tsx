@@ -133,7 +133,7 @@ export default function Home() {
               const content = <>
                 <div className="project-number">{project.number}</div>
                 <div className="project-info">
-                  <h3>{project.title}</h3>
+                  <div className="project-title-band"><h3>{project.title}</h3></div>
                   <p>{project.description}</p>
                   <span className="project-note">{project.note}{project.path ? " · اضغط للتفاصيل" : ""}</span>
                 </div>
