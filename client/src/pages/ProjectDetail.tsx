@@ -85,7 +85,7 @@ const automatex: DetailData = {
 const school: DetailData = {
   index: "03",
   eyebrow: "نظام إدارة مدرسي",
-  title: "تطبيق مدرسة عبد القادر بدران",
+  title: "نظام أتمتة مدرسة عبد القادر بدران",
   accentTitle: "الشرعية",
   intro: "نظام إدارة شامل يربط تسجيل الطلاب وتنظيم العمل الإداري ومتابعة الأهل ضمن تجربة رقمية أبسط للمدرسة.",
   heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nnemqAteitXKqRUg.jpg",

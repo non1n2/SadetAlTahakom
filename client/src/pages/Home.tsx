@@ -30,7 +30,7 @@ const projects = [
   },
   {
     number: "03",
-    title: "تطبيق مدرسة عبد القادر بدران الشرعية",
+    title: "نظام أتمتة مدرسة عبد القادر بدران الشرعية",
     description: "نظام إدارة شامل يرقمن تسجيل الطلاب، وينظم عمل الإدارة، ويمنح الأهل وسيلة واضحة لمتابعة الطلاب.",
     note: "تطبيق جوال · إدارة مدرسية · متابعة أولياء الأمور",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nnemqAteitXKqRUg.jpg",
