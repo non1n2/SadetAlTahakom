@@ -68,7 +68,7 @@ export default function Home() {
     <div className="ppt-site" dir="rtl">
       <header className="topbar">
         <a href="#home" className="wordmark logo-wordmark" aria-label="سادة التحكم - الصفحة الرئيسية" onClick={closeMenu}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/caRsdztBQtMNvQGQ.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" />
         </a>
         <button className="menu-button" type="button" onClick={() => setMenuOpen((value) => !value)} aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"}>
           {menuOpen ? <X size={21} /> : <Menu size={21} />}
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="corner corner-top" />
           <div className="cover-copy">
             <p className="mono-label">01 / COMPANY PROFILE</p>
-            <h1 className="cover-brand-title"><span className="sr-only">سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/caRsdztBQtMNvQGQ.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></h1>
+            <h1 className="cover-brand-title"><span className="sr-only">سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></h1>
             <p>شركة ناشئة متخصصة في حلول الأتمتة وهندسة الحواسيب، نطوّر أدوات واقعية للقطاعات التي تحتاج تقنية تصنع فرقًا يمكن قياسه.</p>
             <a href="#projects" className="line-button">استكشف مشاريعنا <ArrowLeft size={17} /></a>
           </div>

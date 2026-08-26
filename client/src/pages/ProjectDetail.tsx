@@ -168,7 +168,7 @@ function DetailPage({ data }: { data: DetailData }) {
     <div className={`detail-page detail-${data.theme}`} dir="rtl">
       <header className="detail-nav">
         <a href="#/" className="detail-back"><ArrowLeft size={18} /> العودة إلى المشاريع</a>
-        <a href="#/" className="detail-brand detail-logo" aria-label="سادة التحكم - الصفحة الرئيسية"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/caRsdztBQtMNvQGQ.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></a>
+        <a href="#/" className="detail-brand detail-logo" aria-label="سادة التحكم - الصفحة الرئيسية"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></a>
       </header>
       <main>
         <section className="detail-hero">
