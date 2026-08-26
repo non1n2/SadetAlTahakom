@@ -115,7 +115,7 @@ const cnc: DetailData = {
   title: "مكنة CNC",
   accentTitle: "لحفر الخشب",
   intro: "مشروع تصميم وتصنيع مكنة لحفر الخشب والنقش على الأبواب الخشبية، بخبرات محلية وخدمة صيانة سريعة.",
-  heroImage: "/manus-storage/sada-cnc-machine_225a89c8.png",
+  heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/DqiAepxOrdKPAgHj.png",
   heroAlt: "تصميم مكنة CNC لحفر الخشب من مشاريع سادة التحكم",
   heroLabel: "CNC / WOOD ROUTER",
   problemTitle: "أداة إنتاج محلية لورشة الخشب.",

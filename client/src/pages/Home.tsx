@@ -43,7 +43,7 @@ const projects = [
     title: "مكنة CNC لحفر الخشب",
     description: "تصميم وتصنيع مكنة لحفر الخشب والنقش على الأبواب الخشبية بخبرات محلية، مع خدمات صيانة سريعة.",
     note: "تصميم محلي · تصنيع · صيانة",
-    image: "/manus-storage/sada-cnc-machine_225a89c8.png",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/DqiAepxOrdKPAgHj.png",
     alt: "تصميم مكنة CNC لحفر الخشب من مشاريع سادة التحكم",
     tone: "technical",
     path: "projects/cnc-router",
