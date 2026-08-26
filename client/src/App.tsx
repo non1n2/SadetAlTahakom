@@ -5,7 +5,7 @@ import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import { AutoMateXDetail, SmartIncubatorDetail } from "./pages/ProjectDetail";
+import { AutoMateXDetail, CncDetail, SchoolDetail, SeedlingToolsDetail, SmartIncubatorDetail } from "./pages/ProjectDetail";
 
 function AppRoutes() {
   return (
@@ -14,6 +14,9 @@ function AppRoutes() {
         <Route path="/" component={Home} />
         <Route path="/projects/smart-incubator" component={SmartIncubatorDetail} />
         <Route path="/projects/automatex" component={AutoMateXDetail} />
+        <Route path="/projects/school-app" component={SchoolDetail} />
+        <Route path="/projects/cnc-router" component={CncDetail} />
+        <Route path="/projects/seedling-tools" component={SeedlingToolsDetail} />
         <Route component={Home} />
       </Switch>
     </Router>

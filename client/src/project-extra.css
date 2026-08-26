@@ -1,0 +1,4 @@
+/* Additional project pages: preserve the black/white/gold deck language when an original project photo is unavailable. */
+.detail-hero-schematic { background:#161616; display:grid; place-items:center; }
+.cnc-detail-mark { width:100%; height:100%; min-height:410px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; color:#fff; font-family:var(--font-mono); }
+.cnc-detail-mark strong { font-size:clamp(72px,10vw,130px); letter-spacing:-.11em; line-height:.8; }.cnc-detail-mark i { width:62%; height:1px; background:#e9b36e; }.cnc-detail-mark span { font-size:12px; letter-spacing:.18em; }.cnc-detail-mark small { margin-top:8px; color:#d8c5a2; font-size:9px; letter-spacing:.15em; }

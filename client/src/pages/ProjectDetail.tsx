@@ -3,6 +3,7 @@ import { ArrowLeft, Check, Mail, Phone } from "lucide-react";
 import "../project-detail.css";
 import "../logo.css";
 import "../section-separation.css";
+import "../project-extra.css";
 
 type DetailData = {
   index: string;
@@ -10,7 +11,7 @@ type DetailData = {
   title: string;
   accentTitle: string;
   intro: string;
-  heroImage: string;
+  heroImage: string | null;
   heroAlt: string;
   heroLabel: string;
   problemTitle: string;
@@ -24,7 +25,7 @@ type DetailData = {
   targetTitle: string;
   audiences: string[];
   phase: string;
-  theme: "incubator" | "automatex";
+  theme: "incubator" | "automatex" | "school" | "cnc" | "seedling";
 };
 
 const incubator: DetailData = {
@@ -81,17 +82,98 @@ const automatex: DetailData = {
   theme: "automatex",
 };
 
+const school: DetailData = {
+  index: "03",
+  eyebrow: "SCHOOL MANAGEMENT SYSTEM",
+  title: "تطبيق مدرسة عبد القادر بدران",
+  accentTitle: "الشرعية",
+  intro: "نظام إدارة شامل يربط تسجيل الطلاب وتنظيم العمل الإداري ومتابعة الأهل ضمن تجربة رقمية أبسط للمدرسة.",
+  heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nnemqAteitXKqRUg.jpg",
+  heroAlt: "واجهات تطبيق مدرسة عبد القادر بدران الشرعية",
+  heroLabel: "SCHOOL MANAGEMENT / MOBILE",
+  problemTitle: "الإدارة المدرسية تحتاج مسارًا موحدًا.",
+  problem: "تعدد المعاملات الورقية بين مكاتب المدرسة وغياب قناة واضحة لمتابعة الأهل يرفعان عبء العمل اليومي ويؤخران الوصول إلى المعلومة.",
+  problemPoints: ["تسجيل طلاب يحتاج تنظيمًا أوضح", "معاملات ورقية بين مكاتب الإدارة", "متابعة الأهل لطلابهم تحتاج قناة مباشرة"],
+  solutionTitle: "نظام واحد لثلاثة مسارات رئيسية.",
+  solution: "يوفر التطبيق تسجيل الطلاب إلكترونيًا من قبل الإدارة، وينظم عمل الإداريين، ويمنح الأهل وسيلة لمراقبة الطلاب ومتابعتهم.",
+  workflow: [
+    { number: "01", title: "تسجيل إلكتروني", copy: "تنظيم تسجيل الطلاب عبر الإدارة ضمن مسار رقمي واضح." },
+    { number: "02", title: "إدارة منظمة", copy: "استبدال المعاملات الورقية المتنقلة بين مكاتب المدرسة." },
+    { number: "03", title: "متابعة الأهل", copy: "توفير تطبيق يساعد أولياء الأمور على مراقبة الطلاب." },
+  ],
+  metric: "3",
+  metricLabel: "مسارات إدارية وتعليمية موحّدة في نظام واحد",
+  targetTitle: "من يستخدم التطبيق؟",
+  audiences: ["إدارة المدرسة", "الإداريون", "أولياء الأمور"],
+  phase: "نظام إدارة مدرسي",
+  theme: "school",
+};
+
+const cnc: DetailData = {
+  index: "04",
+  eyebrow: "LOCAL CNC MANUFACTURING",
+  title: "مكنة CNC",
+  accentTitle: "لحفر الخشب",
+  intro: "مشروع تصميم وتصنيع مكنة لحفر الخشب والنقش على الأبواب الخشبية، بخبرات محلية وخدمة صيانة سريعة.",
+  heroImage: null,
+  heroAlt: "مخطط نصي لمشروع مكنة CNC لحفر الخشب",
+  heroLabel: "CNC / WOOD ROUTER",
+  problemTitle: "أداة إنتاج محلية لورشة الخشب.",
+  problem: "يركز المشروع على تقديم مكنة مخصصة لحفر الخشب والنقش على الأبواب الخشبية، مع تصميم وتصنيع بخبرات محلية وخدمة صيانة داعمة.",
+  problemPoints: ["حفر الخشب والنقش على الأبواب", "تصميم وتصنيع بخبرات محلية", "خدمات صيانة سريعة"],
+  solutionTitle: "من التصميم إلى خدمة ما بعد التنفيذ.",
+  solution: "تجمع المكنة بين التصميم المحلي والتصنيع وخدمة الصيانة، لتكون جزءًا عمليًا من أدوات العمل في قطاع الأخشاب.",
+  workflow: [
+    { number: "01", title: "تصميم محلي", copy: "تطوير تصميم المكنة اعتمادًا على خبرات محلية." },
+    { number: "02", title: "تصنيع المكنة", copy: "تنفيذ مكنة لحفر الخشب والنقش على الأبواب." },
+    { number: "03", title: "صيانة ودعم", copy: "تقديم خدمات صيانة بسرعة ومهارة حسب العرض التعريفي." },
+  ],
+  metric: "LOCAL",
+  metricLabel: "تصميم وتصنيع مكنة بخبرات محلية",
+  targetTitle: "المجال التطبيقي",
+  audiences: ["ورش الخشب", "صنّاع الأبواب الخشبية", "أعمال الحفر والنقش"],
+  phase: "تصميم وتصنيع محلي",
+  theme: "cnc",
+};
+
+const seedling: DetailData = {
+  index: "05",
+  eyebrow: "SMART NURSERY TOOLS",
+  title: "أدوات زراعية",
+  accentTitle: "لصواني الشتل",
+  intro: "أدوات عملية لفنيي الزراعة وأصحاب المشاتل لتسهيل زراعة صواني الشتل وإدخال أساليب حديثة للمشاتل البلاستيكية.",
+  heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/WEATcOkfgBRxRptC.jpg",
+  heroAlt: "أداة وصينية شتل زراعية",
+  heroLabel: "SEEDLING TRAYS / NURSERY TOOLS",
+  problemTitle: "عمليات شتل أبسط بتكلفة اقتصادية.",
+  problem: "يتناول المشروع أدوات تستخدم من قبل الفني الزراعي وأصحاب المشاتل والعمال لتسهيل زراعة صواني الشتل وتطوير أساليب العمل في المشاتل البلاستيكية.",
+  problemPoints: ["تسهيل زراعة صواني الشتل", "إتاحة الأدوات للفنيين والعمال", "تكلفة تشغيل زهيدة"],
+  solutionTitle: "أدوات عملية للمشتل الحديث.",
+  solution: "تدعم الأدوات سير العمل اليومي في المشاتل عبر حلول بسيطة ومباشرة تساعد على اعتماد أساليب زراعية أحدث.",
+  workflow: [
+    { number: "01", title: "تجهيز صواني الشتل", copy: "استخدام أدوات مصممة لمراحل التعامل مع صواني الشتل." },
+    { number: "02", title: "تسهيل عمل الفني", copy: "تقديم أدوات قابلة للاستخدام من الفنيين وأصحاب المشاتل والعمال." },
+    { number: "03", title: "تحديث أسلوب العمل", copy: "دعم إدخال أساليب حديثة للمشاتل البلاستيكية." },
+  ],
+  metric: "LOW",
+  metricLabel: "أدوات مساعدة بزمن وكلفة تشغيل اقتصاديين",
+  targetTitle: "من يستخدم الأدوات؟",
+  audiences: ["فنيّو الزراعة", "أصحاب المشاتل", "العمال الزراعيون"],
+  phase: "حلول زراعية للمشاتل",
+  theme: "seedling",
+};
+
 function DetailPage({ data }: { data: DetailData }) {
   return (
     <div className={`detail-page detail-${data.theme}`} dir="rtl">
       <header className="detail-nav">
         <a href="#/" className="detail-back"><ArrowLeft size={18} /> العودة إلى المشاريع</a>
-        <a href="#/" className="detail-brand detail-logo" aria-label="سادة التحكم - الصفحة الرئيسية"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/nOdSyXACWGFuaZeb.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></a>
+        <a href="#/" className="detail-brand detail-logo" aria-label="سادة التحكم - الصفحة الرئيسية"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/caRsdztBQtMNvQGQ.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></a>
       </header>
       <main>
         <section className="detail-hero">
           <div className="detail-hero-copy"><p className="detail-eyebrow">{data.index} / {data.eyebrow}</p><h1>{data.title}<br /><em>{data.accentTitle}</em></h1><p>{data.intro}</p><span className="detail-phase">{data.phase}</span></div>
-          <figure className="detail-hero-media"><img src={data.heroImage} alt={data.heroAlt} /><figcaption>{data.heroLabel}</figcaption></figure>
+          <figure className={`detail-hero-media${data.heroImage ? "" : " detail-hero-schematic"}`}>{data.heroImage ? <img src={data.heroImage} alt={data.heroAlt} /> : <div className="cnc-detail-mark" aria-label={data.heroAlt}><strong>CNC</strong><i /><span>WOOD ROUTER</span><small>LOCAL FABRICATION</small></div>}<figcaption>{data.heroLabel}</figcaption></figure>
         </section>
 
         <section className="detail-problem detail-section"><div className="detail-section-label">01 / الحاجة</div><div><h2>{data.problemTitle}</h2><p>{data.problem}</p></div><ul>{data.problemPoints.map((point) => <li key={point}><Check size={17} /> {point}</li>)}</ul></section>
@@ -111,3 +193,6 @@ function DetailPage({ data }: { data: DetailData }) {
 
 export function SmartIncubatorDetail() { return <DetailPage data={incubator} />; }
 export function AutoMateXDetail() { return <DetailPage data={automatex} />; }
+export function SchoolDetail() { return <DetailPage data={school} />; }
+export function CncDetail() { return <DetailPage data={cnc} />; }
+export function SeedlingToolsDetail() { return <DetailPage data={seedling} />; }
