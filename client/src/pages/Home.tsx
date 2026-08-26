@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpLeft, ChevronLeft, Mail, Menu, Phone, X } from "lucid
 import { useState } from "react";
 import "../polish.css";
 import "../logo.css";
+import "../section-separation.css";
 
 const projects = [
   {

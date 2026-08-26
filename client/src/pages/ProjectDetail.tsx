@@ -2,6 +2,7 @@
 import { ArrowLeft, Check, Mail, Phone } from "lucide-react";
 import "../project-detail.css";
 import "../logo.css";
+import "../section-separation.css";
 
 type DetailData = {
   index: string;
