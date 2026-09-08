@@ -123,7 +123,6 @@ export default function Home() {
           <a href="#services" onClick={closeMenu}>خدماتنا</a>
           <a href="#projects" onClick={closeMenu}>مشاريعنا</a>
           <a href="#achievements" onClick={closeMenu}>إنجازاتنا</a>
-          <a href="#vision" onClick={closeMenu}>رؤيتنا</a>
           <a href="#team" onClick={closeMenu}>فريقنا</a>
         </nav>
       </header>
@@ -133,7 +132,7 @@ export default function Home() {
 <section style={{ padding: "3rem 1.5rem", maxWidth: "1100px", margin: "0 auto" }}>
   <div className="cover-copy" style={{ marginBottom: "2rem" }}>
     <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: "800", lineHeight: "1.2", marginBottom: "1rem" }}>
-      سادة التحكم <br />
+     <span style={{ color: "#8C6A38" }}>سادة التحكم</span><br />
       <span style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)", fontWeight: "500", color: "#555" }}>لحلول الأتمتة والذكاء الاصطناعي</span>
     </h1>
     <p style={{ lineHeight: "1.6", color: "#4A4A4A", maxWidth: "600px" }}> شركة ناشئة متخصصة في حلول الأتمتة وهندسة الحواسيب، نطوّر أدوات واقعية للقطاعات التي تحتاج تقنية تصنع فرقًا يمكن قياسه.</p>
@@ -181,20 +180,19 @@ export default function Home() {
       style={{ maxWidth: "85%", maxHeight: "85%", objectFit: "contain" }} 
     />
   </div>
-
-  {/* 4. الصورة الثالثة (فريق العمل) - السطر الثاني (يسار) */}
-  <div style={{ flex: "1 1 calc(50% - 6px)", height: "240px" }}>
-    <img 
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/qBWbdZxxrUabPyGq.jpg" 
-      alt="فريق العمل" 
-      style={{ width: "100%", height: "100%", objectFit: "cover", clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }} 
-    />
-  </div>
   {/* 3. الصورة الثانية (الرؤية الحاسوبية) - السطر الثاني (يمين) */}
   <div style={{ flex: "1 1 calc(50% - 6px)", height: "240px" }}>
     <img 
       src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/vtnSNLStfCLsEEGw.jpg" 
       alt="الرؤية الحاسوبية" 
+      style={{ width: "100%", height: "100%", objectFit: "cover", clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }} 
+    />
+  </div>
+  {/* 4. الصورة الثالثة (فريق العمل) - السطر الثاني (يسار) */}
+  <div style={{ flex: "1 1 calc(50% - 6px)", height: "240px" }}>
+    <img 
+      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/qBWbdZxxrUabPyGq.jpg" 
+      alt="فريق العمل" 
       style={{ width: "100%", height: "100%", objectFit: "cover", clipPath: "polygon(0 0, 100% 0, 85% 100%, 0 100%)" }} 
     />
   </div>
@@ -241,7 +239,7 @@ export default function Home() {
 
         {/* 5. Services Section */}
         <section id="services" style={{ padding: "4rem 1.5rem", maxWidth: "1100px", margin: "0 auto" }}>
-          <b style={{ display: "block", marginBottom: "1.5rem", color: "#8C6A38" }}>خدماتنا مجالات عملنا</b>
+          <b style={{ display: "block", marginBottom: "1.5rem", color: "#8C6A38", fontSize: "1.5rem" }}>خدماتنا و مجالات عملنا</b>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
             {services.map((s, idx) => (
               <div key={idx} style={{ padding: "1.5rem", backgroundColor: "#F2ECE1", borderRadius: "8px", border: "1px solid #E5DEC9" }}>
@@ -255,7 +253,7 @@ export default function Home() {
 
         {/* 6. Projects Section */}
         <section id="projects" style={{ padding: "4rem 1.5rem", maxWidth: "1100px", margin: "0 auto" }}>
-          <b style={{ display: "block", marginBottom: "0.5rem", color: "#8C6A38" }}>منتجاتنا ومشاريعنا</b>
+          <b style={{ display: "block", marginBottom: "0.5rem", color: "#8C6A38", fontSize: "1.5rem"  }}>منتجاتنا ومشاريعنا</b>
           <p style={{ color: "#4A4A4A", marginBottom: "2rem" }}>خمسة مشاريع طُوّرت انطلاقًا من احتياج واقعي، بين الأتمتة الصناعية، البرمجيات، والحلول الزراعية.</p>
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             {projects.map((project, index) => (
@@ -302,7 +300,7 @@ export default function Home() {
               </article>
               <article style={{ borderBottom: "1px solid #1A1A1A", padding: "1.25rem 0" }}>
                 <h3 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "0.4rem" }}>مشاركات ومعارض</h3>
-                <p style={{ fontSize: "0.95rem", color: "#4A4A4A", margin: 0, lineHeight: "1.6" }}>High-tech 2024، serfiks 2024، ومعرض دمشق الدولي 2025.</p>
+                <p style={{ fontSize: "0.95rem", color: "#4A4A4A", margin: 0, lineHeight: "1.6" }}>High-tech 2024، serfiks 2024، معرض دمشق الدولي 2025 ،معرض دمشق الدولي 2026.</p>
               </article>
               <article style={{ borderBottom: "1px solid #1A1A1A", padding: "1.25rem 0" }}>
                 <h3 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "0.4rem" }}>مسابقات ريادية</h3>
@@ -317,7 +315,7 @@ export default function Home() {
         {/* 9. Team */}
 <section id="team" style={{ padding: "4rem 1.5rem", maxWidth: "1100px", margin: "0 auto" }}>
   {/* تكبير عنوان فريق العمل */}
-  <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "2rem", color: "#8C6A38" }}>
+  <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "2rem", color: "#8C6A38", fontSize: "2.5rem"  }}>
     فريق العمل
   </h2>
 
