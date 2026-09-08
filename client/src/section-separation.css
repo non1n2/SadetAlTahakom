@@ -1,0 +1,37 @@
+/* Layout polish: each section receives a distinct, low-noise surface to preserve the editorial slide rhythm. */
+.ppt-site .cover { background:#fff; }
+.ppt-site .about-section { background:linear-gradient(135deg,#fcfbf8 0%,#f6efe5 100%); box-shadow:inset 0 1px 0 rgba(255,255,255,.85); }
+.ppt-site .projects-section { background:linear-gradient(180deg,#edf3f3 0%,#f7f8f7 100%); border-bottom:1px solid var(--ink); }
+.ppt-site .achievements-section { background:linear-gradient(135deg,#f7f0e6 0%,#faf8f4 60%,#eef4f2 100%); }
+.ppt-site .vision-section { background:#153543; color:#fff; border-bottom:0; }
+.ppt-site .vision-section .section-kicker,.ppt-site .vision-section .section-kicker > span { color:#cbdde2; }
+.ppt-site .vision-section .section-kicker i { background:#cbdde2; }
+.ppt-site .vision-section h2 { color:#fff; }
+.ppt-site .vision-section h2 em { color:#e9b36e; }
+.ppt-site .vision-copy { border-color:#d2e1e3; }
+.ppt-site .vision-copy p,.ppt-site .vision-copy p:last-child { color:#edf4f3; }
+.ppt-site .vision-lines span { background:#d2e1e3; }.ppt-site .vision-lines span:nth-child(2) { background:#e9b36e; }
+.ppt-site .team-section { background:linear-gradient(135deg,#f7faf7 0%,#edf4ee 100%); }
+.ppt-site .contact-section { border-top:12px solid #e9b36e; }
+.detail-page .detail-hero { background:linear-gradient(135deg,#fff 0%,var(--detail-soft) 100%); }
+.detail-page .detail-problem { background:#fbfcfd; }
+.detail-page .detail-solution { box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -1px 0 rgba(19,59,87,.08); }
+.detail-page .detail-target { background:linear-gradient(135deg,#fff 0%,#f7fafb 100%); }
+.detail-page .detail-contact { border-top:12px solid var(--detail-accent); }
+@media (max-width:820px) { .ppt-site .contact-section,.detail-page .detail-contact { border-top-width:7px; } }
+
+/* Project detail pages inherit the same black, white, and wood-gold presentation language as the homepage. */
+.detail-page { --detail-ink:#161616; --detail-accent:#a56f35; --detail-soft:#f6f0e8; }
+.detail-page .detail-nav { background:#fff; border-bottom-color:#161616; }
+.detail-page .detail-hero { position:relative; background:#fff; border-bottom:1px solid #161616; }
+.detail-page .detail-hero::after { content:""; position:absolute; top:0; right:0; width:78px; height:14px; background:#161616; }
+.detail-page .detail-hero h1,.detail-page .detail-section h2,.detail-page .detail-contact h2 { color:#161616; }
+.detail-page .detail-hero h1 em,.detail-page .detail-contact h2 em { color:#a56f35; }
+.detail-page .detail-problem,.detail-page .detail-target { position:relative; background:#fbfaf7; border-top-color:#161616; }
+.detail-page .detail-problem::after,.detail-page .detail-target::after { content:""; position:absolute; left:0; bottom:0; width:22px; height:22px; background:#161616; }
+.detail-page .detail-solution { background:#f6f0e8; border-top:1px solid #161616; border-bottom:1px solid #161616; box-shadow:none; }
+.detail-page .workflow { border-top-color:#161616; }.detail-page .workflow article { border-left-color:#161616; }
+.detail-page .detail-impact { background:#161616; border-top:10px solid #a56f35; border-bottom:10px solid #a56f35; }
+.detail-page .detail-impact .detail-section-label { color:#e9b36e; }.detail-page .impact-stat { color:#fff; }
+.detail-page .detail-contact { background:#f6f0e8; border-top-color:#161616; }
+.detail-page .detail-footer { border-top:1px solid #161616; color:#555; }
