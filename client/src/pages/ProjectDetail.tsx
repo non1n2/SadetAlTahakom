@@ -4,6 +4,7 @@ import "../project-detail.css";
 import "../logo.css";
 import "../section-separation.css";
 import "../project-extra.css";
+import {useEffect} from "react";
 
 type DetailData = {
   index: string;
@@ -164,11 +165,19 @@ const seedling: DetailData = {
 };
 
 function DetailPage({ data }: { data: DetailData }) {
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/projects?project=${data.theme}`, {
+      method: "POST", 
+      credentials: "include",
+    }).catch((err) => console.log("Tracking error:", err));
+  }, [data.theme]);
+
   return (
     <div className={`detail-page detail-${data.theme}`} dir="rtl">
       <header className="detail-nav">
-        <a href="#/" className="detail-back"><ArrowLeft size={18} /> العودة إلى المشاريع</a>
-        <a href="#/" className="detail-brand detail-logo" aria-label="سادة التحكم - الصفحة الرئيسية"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></a>
+        <a href="/" className="detail-back"><ArrowLeft size={18} /> العودة إلى المشاريع</a>
+        <a href="/" className="detail-brand detail-logo" aria-label="سادة التحكم - الصفحة الرئيسية"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم لحلول الأتمتة والذكاء الاصطناعي" /></a>
       </header>
       <main>
         <section className="detail-hero">
@@ -186,7 +195,7 @@ function DetailPage({ data }: { data: DetailData }) {
 
         <section className="detail-contact"><div><p className="detail-eyebrow">تواصل بشأن المشروع</p><h2>تواصل بشأن<br /><em>{data.title}</em></h2></div><div className="detail-contact-links"><a href="https://wa.me/963982401070" target="_blank" rel="noreferrer"><Phone size={17} /> تواصل عبر واتساب</a><a href="mailto:nomandawod96@gmail.com"><Mail size={17} /> راسلنا بالبريد</a></div></section>
       </main>
-      <footer className="detail-footer"><span>سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><a href="#/">العودة للصفحة الرئيسية</a></footer>
+      <footer className="detail-footer"><span>سادة التحكم لحلول الأتمتة والذكاء الاصطناعي</span><a href="/">العودة للصفحة الرئيسية</a></footer>
     </div>
   );
 }

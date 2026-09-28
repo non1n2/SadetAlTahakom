@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUpLeft, ChevronLeft, Mail, Menu, Phone, X, Cpu, Globe, Award, Wrench, Send, MessageCircle } from "lucide-react";
-import { useState } from "react";
+import { useState , useEffect} from "react";
+import { useLocation } from "wouter";
 import "../polish.css";
 import "../logo.css";
 import "../section-separation.css";
@@ -74,6 +75,24 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
 
+  const [location] = useLocation();
+
+
+  useEffect(() => {          
+    const id = location === "/" ? "home" : location.slice(1);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  }, [location]);
+
+
+  useEffect(() => {
+    fetch("http://localhost:5000/user/", {
+      method: "POST",
+      credentials: "include"  
+    }).then((data) => console.log("رد الباك اند:", data))
+      .catch((err) => console.log("صار خطأ:", err));
+  }, []);
+
+
   return (
     <div className="ppt-site" dir="rtl" style={{ backgroundColor: "#FAF7F2", color: "#1A1A1A", fontFamily: "sans-serif" }}>
       
@@ -112,18 +131,18 @@ export default function Home() {
 
       {/* 1. Header & Navbar */}
       <header className="topbar" style={{ backgroundColor: "#F2ECE1", borderBottom: "1px solid #E5DEC9", padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", position: "relative" }}>
-        <a href="#home" className="wordmark logo-wordmark" aria-label="سادة التحكم" onClick={closeMenu}>
+        <a href="home" className="wordmark logo-wordmark" aria-label="سادة التحكم" onClick={closeMenu}>
           <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663778931753/YhDNnPkTUAoVIycs.png" alt="شعار سادة التحكم" style={{ height: "80px" }} />
         </a>
         <button className="menu-button" type="button" onClick={() => setMenuOpen((v) => !v)} aria-label="القائمة" style={{ background: "none", border: "none", cursor: "pointer" }}>
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         <nav className={`nav-links ${menuOpen ? "open" : ""}`} style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
-          <a href="#about" onClick={closeMenu}>عن الشركة</a>
-          <a href="#services" onClick={closeMenu}>خدماتنا</a>
-          <a href="#projects" onClick={closeMenu}>مشاريعنا</a>
-          <a href="#achievements" onClick={closeMenu}>إنجازاتنا</a>
-          <a href="#team" onClick={closeMenu}>فريقنا</a>
+          <a href="about" onClick={closeMenu}>عن الشركة</a>
+          <a href="services" onClick={closeMenu}>خدماتنا</a>
+          <a href="projects" onClick={closeMenu}>مشاريعنا</a>
+          <a href="achievements" onClick={closeMenu}>إنجازاتنا</a>
+          <a href="team" onClick={closeMenu}>فريقنا</a>
         </nav>
       </header>
 
@@ -258,7 +277,7 @@ export default function Home() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             {projects.map((project, index) => (
               <a 
-                href={`#/${project.path}`} 
+                href={`/${project.path}`} 
                 key={index} 
                 className="project-card"
                 style={{ 
@@ -480,4 +499,5 @@ export default function Home() {
       </footer>
     </div>
   );
+
 }
